@@ -1,7 +1,7 @@
 # Kusto Detective - Rookie - The rarest book is missing
 
 ## Introduction
-Welcome to the actual first challenge. Let’s just say that it is expected that you have practiced since the last task. These tasks were released with a 2 week break in between each other. Considering the level of the query for the first task, this one takes it even further. Not to be worried, but if you are solving this by yourself, you’re in for more and more brain twisters.
+Welcome to the inaugural challenge! Given the complexity of the initial task, this one pushes the boundaries even further. Don't fret, but if you're tackling this solo, brace yourself for increasingly mind-bending puzzles.
 
 The query itself makes totally sense once you get the correct answer, but going from a logic reasoning and transferring into a query that does what you want takes practice. I will try to make these walkthroughs more progressive than what the tasks may feel like.
 
@@ -9,7 +9,7 @@ Copy the query in the inbox text and run through it like we did in the onboardin
 
 ## The Story
 
-"I want to add an image here?" - Sorry, the image is missing.
+![Story](https://github.com/KhalidAbdelaty/Kusto_Detective/blob/main/Story.jpg)
 
 Let's dive into the story by reading the provided screenshot. How would you proceed from here? For me, the first step is to formulate a strategy by understanding the story and determining what to look for. Here are some keywords to extract from the story:
 
@@ -30,7 +30,7 @@ Let's move on to the hints to gather more information that could lead us in the 
 Take a more in depth look of the book of interest. I find this as a self explanatory thing to do when starting out. Find out what kind of data you are dealing with, and see if anything stands out with the element in question. Also, you might remember a few details that can trigger any lead when doing so.
 
 ### Second hint
-"I wanna to add image here? "
+![Hint2](https://github.com/KhalidAbdelaty/Kusto_Detective/blob/main/Hint%202.jpg)
 This hint proves valuable as it leads me into some queries and keywords that was interesting. The first element locks down on shelf 5853 using where. The mv-expand function takes the whole list of RFID’s and creates a new row for each with their original belonging values residing in the original entry. From here we have every book with its shelf and the shelves total weight. Moving on the hint does a lookup. A lookup is similar to a join (it basically means to combine two tables), but has a few differences:
 
 like non repeating columns from the $right table,
@@ -42,8 +42,8 @@ Microsoft has more info to dig deeper into.
 So, what is lookup doing here? Well, it “joins” or looks up all the information from Books and broadcasts it based on rf_id from $right to $left. And then reducing numbers of columns shown by project. The columns you put after this will be the columns that are being part of the output.
 
 ### Third hint
-"I wanna to add image here? "
-Nothing is perfect, ey? Dust?
+![Hint3](https://github.com/KhalidAbdelaty/Kusto_Detective/blob/main/Hint%203.jpg)
+
 
 ## Solution
 Based on everything we have gone through now, we have a query from the hints that has taken us pretty far. We’ve been forced to try out a few different functions that seem to do a lot of what we are looking for. The query we are left with is:
