@@ -26,7 +26,7 @@ Let's move on to the hints to gather more information that could lead us in the 
 
 ## Hints
 ### First hint
-"I wanna to add image here? "
+["Hint1"](https://github.com/KhalidAbdelaty/Kusto_Detective/blob/main/Hint%201.jpg)
 Take a more in depth look of the book of interest. I find this as a self explanatory thing to do when starting out. Find out what kind of data you are dealing with, and see if anything stands out with the element in question. Also, you might remember a few details that can trigger any lead when doing so.
 
 ### Second hint
