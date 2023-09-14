@@ -73,3 +73,8 @@ Shelves
 ```
 
 This gives us a very interesting shelf number indeed!
+
+
+![Final Answer](https://github.com/KhalidAbdelaty/Kusto_Detective/blob/main/Answer.jpg)
+
+&copy; Khalid Abdelaty 2023
